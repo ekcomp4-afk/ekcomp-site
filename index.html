@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EKCOMP – Jasa Instalasi Windows & Android Profesional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <meta name="description" content="EKCOMP – Jasa Instalasi Windows & Android Profesional. Instalasi cepat, aman, dan terpercaya." />
+    <meta property="og:title" content="EKCOMP – Jasa Instalasi Windows & Android" />
+    <meta property="og:description" content="Solusi profesional instalasi Windows & Android terpercaya." />
+    <meta property="og:image" content="ekcomp.webp" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#1e40af">
+
+<!-- Favicon WebP -->
+<link rel="icon" type="image/webp" href="assets/images/ekcomp.webp" />
+
+<!-- Favicon PNG fallback -->
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/ekcomp1.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/icons/ekcomp2.png">
+
+<!-- Favicon untuk Safari / iOS -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/icons/ekcomp3.png">
+
+<!-- Favicon untuk browser lama / Windows -->
+<link rel="shortcut icon" href="assets/icons/ekcomp.ico">
+
+    <style>
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 64px; /* tinggi header */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 64px);
+  background: white;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%);
+  z-index: 40;
+}
+
+.mobile-menu.active {
+  display: flex;
+  transform: translateX(0);
+}
+
+      .service-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+
+      .testimonial-card {
+        transition: all 0.3s ease;
+      }
+
+      .testimonial-card:hover {
+        transform: scale(1.05);
+      }
+
+      .rating-container {
+        margin: 10px 0;
+      }
+
+      .rating-star {
+        cursor: pointer;
+        color: #d1d5db;
+        /* gray-300 */
+        transition: color 0.2s;
+      }
+
+      .rating-star:hover,
+      .rating-star.active {
+        color: #fbbf24;
+        /* yellow-400 */
+      }
+
+      .testimonial-card {
+        animation: fadeIn 0.5s ease-in-out;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100 text-gray-900">
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed w-full top-0 z-60">
+      <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+<!-- Header Logo -->
+      <a href="#home" aria-label="Beranda">
+        <img src="assets/images/ekcomp.webp"
+            alt="Logo EKCOMP – Jasa Instalasi Windows & Android Profesional"
+            class="h-16 md:h-20" />
+      </a>
+
+        <nav class="hidden md:flex space-x-8">
+          <a href="#home" class="hover:text-blue-600">Beranda</a>
+          <a href="#services" class="hover:text-blue-600">Layanan</a>
+          <a href="#advantages" class="hover:text-blue-600">Keunggulan</a>
+          <a href="#testimonials" class="hover:text-blue-600">Testimoni</a>
+          <a href="#contact" class="hover:text-blue-600">Kontak</a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-2xl" aria-label="Buka menu navigasi">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-menu" class="mobile-menu bg-white shadow-md md:hidden">
+      <a href="#home" class="block px-6 py-3 hover:bg-gray-100">Beranda</a>
+      <a href="#services" class="block px-6 py-3 hover:bg-gray-100">Layanan</a>
+      <a href="#advantages" class="block px-6 py-3 hover:bg-gray-100">Keunggulan</a>
+      <a href="#testimonials" class="block px-6 py-3 hover:bg-gray-100">Testimoni</a>
+      <a href="#contact" class="block px-6 py-3 hover:bg-gray-100">Kontak</a>
+    </div>
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r from-blue-500 to-blue-700 text-white py-20 mt-16">
+      <div class="container mx-auto px-4 flex flex-col items-center justify-center text-center">
+        <div class="md:w-3/4 lg:w-1/2">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">Jasa Instalasi Profesional Windows & Android</h1>
+          <p class="text-lg md:text-xl mb-6">Solusi tepat untuk perangkat komputer dan smartphone Anda. Garansi resmi dan pekerjaan rapi.</p>
+          <div class="flex flex-col md:flex-row justify-center gap-4">
+            <a href="#contact" class="bg-yellow-400 text-blue-900 px-6 py-3 rounded-full font-semibold hover:bg-yellow-300 transition"> Hubungi Kami </a>
+            <a href="#services" class="bg-white text-blue-700 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition"> Layanan Kami </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Layanan Kami</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Windows Service -->
+          <div class="service-card bg-gray-50 p-8 rounded-xl shadow-lg transition duration-300">
+            <div class="flex items-center mb-4">
+              <i class="fab fa-windows text-4xl text-blue-500 mr-4"></i>
+              <h3 class="text-2xl font-bold">Instalasi Windows</h3>
+            </div>
+            <p class="mb-4 text-gray-700">Layanan instalasi Windows profesional untuk semua versi (Windows 10, 11, dll) dengan driver lengkap dan update terbaru.</p>
+            <ul class="mb-6 space-y-2 text-gray-700">
+              <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Format & instal baru</li>
+              <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Instal ulang tanpa kehilangan data</li>
+              <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Pembersihan virus & optimasi sistem</li>
+              <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Driver lengkap dan update terbaru</li>
+              <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Backup data penting</li>
+            </ul>
+            <p class="text-xl font-bold text-blue-600">Rp 150.000 – 300.000</p>
+          </div>
+          <!-- Android Service -->
+          <div class="service-card bg-gray-50 p-8 rounded-xl shadow-lg transition duration-300">
+            <div class="flex items-center mb-4">
+              <i class="fab fa-android text-4xl text-green-500 mr-4"></i>
+              <h3 class="text-2xl font-bold">Instalasi Android</h3>
+            </div>
+            <p class="mb-4 text-gray-700">Flash/install ulang Android dengan ROM original untuk berbagai merk smartphone (Samsung, Xiaomi, Oppo, dll).</p>
+            <ul class="mb-6 space-y-2 text-gray-700">
+              <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Unlock bootloader & root</li>
+              <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Install custom ROM/recovery</li>
+              <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Perbaikan soft brick/hard brick</li>
+              <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Upgrade/downgrade versi Android</li>
+              <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Backup data sebelum instalasi</li>
+            </ul>
+            <p class="text-xl font-bold text-green-600">Rp 200.000 – 400.000</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section id="advantages" class="py-16 bg-blue-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Kenapa Memilih Kami?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <div class="text-blue-500 text-4xl mb-4">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Garansi Resmi</h3>
+            <p class="text-gray-700">Garansi 30 hari untuk semua layanan instalasi kami. Jika ada masalah, kami siap memperbaiki.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <div class="text-blue-500 text-4xl mb-4">
+              <i class="fas fa-user-tie"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Teknisi Profesional</h3>
+            <p class="text-gray-700">Dikerjakan oleh teknisi berpengalaman dengan sertifikasi IT resmi.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <div class="text-blue-500 text-4xl mb-4">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Proses Cepat</h3>
+            <p class="text-gray-700">Instalasi Windows hanya 1-2 jam, Flash Android 30-60 menit terganti model.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <div class="text-blue-500 text-4xl mb-4">
+              <i class="fas fa-lock"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Aman & Terpercaya</h3>
+            <p class="text-gray-700">Data Anda aman, kami backup sebelum proses instalasi.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <div class="text-blue-500 text-4xl mb-4">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Perlengkapan Lengkap</h3>
+            <p class="text-gray-700">Alat dan software original untuk hasil terbaik.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-md text-center">
+            <div class="text-blue-500 text-4xl mb-4">
+              <i class="fas fa-home"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Layanan Jemput Antar</h3>
+            <p class="text-gray-700">Untuk area tertentu, kami menyediakan layanan pickup dan delivery.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-6">Apa Kata Pelanggan Kami</h2>
+
+        <!-- Comment Form Section -->
+        <div id="user-comments" class="mb-12 bg-gray-50 p-8 rounded-xl">
+          <h3 class="text-2xl font-bold mb-6">Tinggalkan Testimoni Anda</h3>
+          <form id="comment-form" class="space-y-4">
+            <div>
+              <label for="comment-name" class="block mb-1">Nama Anda</label>
+              <input type="text" id="comment-name" class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-300" />
+            </div>
+            <div>
+              <label class="block mb-1">Rating</label>
+              <div class="rating-container flex">
+                <i class="fas fa-star rating-star" data-rating="1"></i>
+                <i class="fas fa-star rating-star" data-rating="2"></i>
+                <i class="fas fa-star rating-star" data-rating="3"></i>
+                <i class="fas fa-star rating-star" data-rating="4"></i>
+                <i class="fas fa-star rating-star" data-rating="5"></i>
+              </div>
+            </div>
+            <div>
+              <label for="comment-text" class="block mb-1">Testimoni</label>
+              <textarea id="comment-text" rows="4" class="w-full px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-300"></textarea>
+            </div>
+            <button type="button" onclick="submitComment()" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition">Kirim Testimoni</button>
+          </form>
+        </div>
+
+        <!-- Testimonials Container with Scroll -->
+        <div class="max-h-[600px] overflow-y-auto mb-12">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pr-4">
+            <!-- Testimoni 1 -->
+            <div class="testimonial-card bg-gray-50 p-6 rounded-lg shadow-lg">
+              <div class="flex items-center mb-4">
+                <img
+                  src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6b16fe36-1887-4ad9-941c-df9f484b9b1b.png"
+                  alt="Pak Andi, pria paruh baya berkacamata dengan senyum ramah mengenakan kemeja biru"
+                  class="w-12 h-12 rounded-full mr-4"
+                />
+                <div>
+                  <h4 class="font-bold">Andi Pratama</h4>
+                  <div class="flex text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="text-gray-700">”Laptop saya error blue screen, setelah diinstal ulang Windows oleh EKCOMP menjadi lebih cepat seperti baru. Teknisinya sangat profesional dan sabar menjelaskan.”</p>
+            </div>
+
+            <!-- Testimoni 2 -->
+            <div class="testimonial-card bg-gray-50 p-6 rounded-lg shadow-lg">
+              <div class="flex items-center mb-4">
+                <img
+                  src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2bddc740-3341-47b1-8cda-472d33b50cbf.png"
+                  alt="Ibu Siti, wanita dewasa tersenyum dengan hijab warna merah muda"
+                  class="w-12 h-12 rounded-full mr-4"
+                />
+                <div>
+                  <h4 class="font-bold">Siti Rahayu</h4>
+                  <div class="flex text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="text-gray-700">”HP Oppo saya tidak bisa nyala, setelah dibawa ke Papua EKCOMP ternyata hanya perlu di-flash. Sekarang berfungsi normal lagi, foto-foto penting saya juga tidak hilang.”</p>
+            </div>
+
+            <!-- Testimoni 3 -->
+            <div class="testimonial-card bg-gray-50 p-6 rounded-lg shadow-lg">
+              <div class="flex items-center mb-4">
+                <img
+                  src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4ecdcfb0-3d2f-45d8-bcd6-b6a6efc5361b.png"
+                  alt="Budi Santoso, pria muda berambut pendek menggunakan kemeja kotak-kotak merah"
+                  class="w-12 h-12 rounded-full mr-4"
+                />
+                <div>
+                  <h4 class="font-bold">Budi Santoso</h4>
+                  <div class="flex text-yellow-400">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+              <p class="text-gray-700">”Saya ingin upgrade Windows 10 ke 11 tapi takut error. EKCOMP mengerjakan dengan baik, bahkan mengoptimalkan performa laptop saya. Sangat recommended!”</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="pt-8 pb-16 bg-blue-600 text-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Hubungi Kami</h2>
+        <div class="flex flex-col md:flex-row gap-8">
+          <div class="md:w-1/2">
+            <h3 class="text-2xl font-bold mb-4">Informasi Kontak</h3>
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-4 text-xl"></i>
+                <div>
+                  <h4 class="font-bold">Alamat</h4>
+                  <p>Jl. Suci Siriwini, Kel. Siriwini, Kec. Nabire, Kab. Nabire, Provinsi Papua Tengah</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-phone-alt mt-1 mr-4 text-xl"></i>
+                <div>
+                  <h4 class="font-bold">Telepon/WhatsApp</h4>
+                  <p>
+                    <a href="https://wa.me/6281373961286" target="_blank" class="bg-white text-blue-600 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-100 transition">
+                      <i class="fab fa-whatsapp"></i>
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-envelope mt-1 mr-4 text-xl"></i>
+                <div>
+                  <h4 class="font-bold">Email</h4>
+                  <p><a href="mailto:kotoukibo4@gmail.com" class="hover:underline text-yellow-300"> kotoukibo4@gmail.com </a></p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <i class="fas fa-clock mt-1 mr-4 text-xl"></i>
+                <div>
+                  <h4 class="font-bold">Jam Operasional</h4>
+                  <p>Senin – Sabtu: 09.00 – 18.00 WIB</p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-8">
+              <h3 class="text-2xl font-bold mb-4">Sosial Media</h3>
+              <div class="flex space-x-4">
+                <a href="https://www.facebook.com/share/19Ta1X8hNr/" class="bg-white text-blue-600 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-100 transition">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/ekmedia77?utm_source=qr&igsh=MWs5dDZ0eTF6cHVkdQ=nametag" class="bg-white text-blue-600 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-100 transition">
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/6281373961286" target="_blank" class="bg-white text-blue-600 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-100 transition">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.tiktok.com/@ekmedia77?_t=ZS-8yJy3OU1Ewh&_r=1" class="bg-white text-blue-600 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-100 transition">
+                  <i class="fab fa-tiktok"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-1/2">
+            <h3 class="text-2xl font-bold mb-4">Formulir Konsultasi</h3>
+            <form class="space-y-4" id="contact-form">
+              <div>
+                <label for="name" class="block mb-1">Nama Lengkap</label>
+                <input type="text" id="name" class="w-full px-4 py-2 rounded text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300" />
+              </div>
+              <div>
+                <label for="phone" class="block mb-1">Nomor WhatsApp</label>
+                <input type="tel" id="phone" pattern="[0-9]+" title="Hanya angka yang diperbolehkan" class="w-full px-4 py-2 rounded text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300" required />
+              </div>
+              <div>
+                <label for="device" class="block mb-1">Jenis Perangkat</label>
+                <select id="device" class="w-full px-4 py-2 rounded text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                  <option value="">Pilih perangkat Anda</option>
+                  <option value="windows">Windows PC/Laptop</option>
+                  <option value="android">Smartphone Android</option>
+                  <option value="both">Keduanya</option>
+                </select>
+              </div>
+              <div>
+                <label for="problem" class="block mb-1">Deskripsi Masalah</label>
+                <textarea id="problem" rows="4" class="w-full px-4 py-2 rounded text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-300"></textarea>
+              </div>
+              <button type="button" onclick="submitForm()" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-bold hover:bg-blue-100 transition">Kirim Pesan</button>
+            </form>
+            <!-- Tombol WhatsApp -->
+<div class="flex items-center space-x-3 mb-4">
+  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"
+       class="w-6 h-6"
+       alt="Ikon WhatsApp EKCOMP"
+       title="Hubungi via WhatsApp" />
+  <a href="https://wa.me/6281373961286" target="_blank" class="hover:underline">+62 81373961286</a>
+</div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-4 md:mb-0">
+            <div class="flex items-center">
+              <!-- Logo saja (tanpa teks) -->
+      <a href="#home" aria-label="Beranda">
+        <img src="assets/images/ekcomp.webp"
+            alt="Logo EKCOMP – Jasa Instalasi Windows & Android Profesional"
+            class="h-16 md:h-20" />
+      </a>
+            </div>
+            <p class="text-gray-400">Solusi Profesional Instalasi Sistem Operasi</p>
+          </div>
+          <div class="flex flex-wrap gap-4">
+            <a href="#home" class="text-gray-300 hover:text-white transition">Beranda</a>
+            <a href="#services" class="text-gray-300 hover:text-white transition">Layanan</a>
+            <a href="#advantages" class="text-gray-300 hover:text-white transition">Keunggulan</a>
+            <a href="#testimonials" class="text-gray-300 hover:text-white transition">Testimoni</a>
+            <a href="#contact" class="text-gray-300 hover:text-white transition">Kontak</a>
+          </div>
+        </div>
+        <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400">
+          <p>© 2025 EKComp. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile Menu Toggle
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const body = document.body;
+
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+        if (mobileMenu.classList.contains('active')) {
+          menuBtn.innerHTML = '<i class="fas fa-times"></i>';
+          body.style.overflow = 'hidden'; // kunci scroll
+        } else {
+          menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+          body.style.overflow = 'auto'; // buka scroll lagi
+        }
+      });
+
+      // Tutup menu jika link diklik
+      document.querySelectorAll('#mobile-menu a').forEach((link) => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.remove('active');
+          menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+          body.style.overflow = 'auto';
+        });
+      });
+
+
+      // Star Rating Functionality
+      document.querySelectorAll('.rating-star').forEach((star) => {
+        star.addEventListener('click', function () {
+          const rating = parseInt(this.getAttribute('data-rating'));
+          const container = this.parentElement;
+
+          // Set active class and color for clicked stars
+          container.querySelectorAll('.rating-star').forEach((s, index) => {
+            if (index < rating) {
+              s.classList.add('active');
+            } else {
+              s.classList.remove('active');
+            }
+          });
+        });
+      });
+
+      // Comment submission
+      function submitComment() {
+        const name = document.getElementById('comment-name').value;
+        const comment = document.getElementById('comment-text').value;
+        const stars = document.querySelectorAll('#comment-form .rating-star.active').length;
+
+        if (!name || !comment || stars === 0) {
+          alert('Harap isi semua field dan beri rating!');
+          return;
+        }
+
+        // Create new comment display
+        const newComment = document.createElement('div');
+        newComment.className = 'testimonial-card bg-gray-50 p-6 rounded-lg shadow-lg mt-6';
+        newComment.innerHTML = `
+                <div class="flex items-center mb-4">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/6054cfa1-08e3-44e1-95cf-3bf694d8f783.png" alt="Foto ${name}" class="w-12 h-12 rounded-full mr-4">
+                    <div>
+                        <h4 class="font-bold">${name}</h4>
+                        <div class="flex mt-1">
+                            ${'<i class="fas fa-star text-yellow-400"></i>'.repeat(stars)}${'<i class="far fa-star text-yellow-400"></i>'.repeat(5 - stars)}
+                        </div>
+                    </div>
+                </div>
+                <p class="text-gray-700">”${comment}”</p>
+            `;
+
+        // Insert new comment inside scrollable testimonials container
+        document.querySelector('#testimonials .grid').prepend(newComment);
+
+        // Reset form
+        document.getElementById('comment-form').reset();
+        document.querySelectorAll('#comment-form .rating-star').forEach((star) => {
+          star.classList.remove('active');
+        });
+
+        // Show success message
+        alert(`Terima kasih ${name}! Testimoni Anda telah berhasil ditambahkan.`);
+      }
+      // Inisialisasi EmailJS
+      (function () {
+        emailjs.init('XIhRrrM3FCBFdFmlb');
+      })();
+      // Form submission
+      function submitForm() {
+        const name = document.getElementById('name').value;
+        const phone = document.getElementById('phone').value;
+        const device = document.getElementById('device').value;
+        const problem = document.getElementById('problem').value;
+
+        if (!name || !phone || !device || !problem) {
+          alert('Harap isi semua field!');
+          return;
+        }
+        // Kirim email menggunakan EmailJS
+        var templateParams = {
+          from_name: name,
+          phone: phone,
+          device: device,
+          problem: problem,
+        };
+        emailjs.send('service_jt9u7zo', 'template_he9wa18', templateParams).then(
+          function (response) {
+            alert(`Terima kasih ${name}! Pesan Anda telah terkirim. Kami akan menghubungi Anda segera via WhatsApp.`);
+            document.getElementById('contact-form').reset();
+          },
+          function (error) {
+            alert('Gagal mengirim pesan. Silakan coba lagi nanti.');
+            console.log('FAILED...', error);
+          }
+        );
+      }
+      // Reset form
+      document.getElementById('contact-form').reset();
+    </script>
+  </body>
+</html>
