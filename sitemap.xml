@@ -22,17 +22,18 @@
     <priority>0.8</priority>
   </url>
 
-      <!-- Testimoni -->
+  <!-- Testimoni -->
   <url>
     <loc>https://ekcomp4-afk.github.io/ekcomp-site/testimoni.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-     <!-- Kontak -->
+  <!-- Kontak -->
   <url>
     <loc>https://ekcomp4-afk.github.io/ekcomp-site/kontak.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
+</urlset>
