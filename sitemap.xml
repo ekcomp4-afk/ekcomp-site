@@ -1,12 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Halaman utama -->
   <url>
     <loc>https://ekcomp4-afk.github.io/ekcomp-site/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
+
+  <!-- Tentang Kami -->
   <url>
     <loc>https://ekcomp4-afk.github.io/ekcomp-site/tentang.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
+
+  <!-- Layanan -->
   <url>
-    <loc>https://ekcomp4-afk.github.io/ekcomp-site/kontak.html</loc>
+    <loc>https://ekcomp4-afk.github.io/ekcomp-site/layanan.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
-</urlset>
+
