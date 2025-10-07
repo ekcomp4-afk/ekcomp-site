@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://ekcomp4-afk.github.io/ekcomp-site/sitemap.xml 
