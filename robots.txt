@@ -1,6 +1,4 @@
-# robots.txt for EKCOMP website
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://ekcomp4-afk.github.io/sitemap.xml
+Sitemap: https://ekcomp4-afk.github.io/ekcomp-site/sitemap.xml 
